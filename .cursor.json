@@ -1,0 +1,55 @@
+{
+  "project": {
+    "name": "study",
+    "type": "kotlin-multiplatform",
+    "target": "desktop",
+    "description": "Projeto Kotlin Multiplatform focado em desenvolvimento Desktop, utilizando Compose Multiplatform para criar interfaces de usuário modernas e responsivas",
+    "technologies": [
+      "Kotlin Multiplatform",
+      "Compose Multiplatform",
+      "Gradle",
+      "Kotlin Coroutines",
+      "Kotlin Serialization"
+    ],
+    "structure": {
+      "root": {
+        "files": [
+          "README.md",
+          "build.gradle.kts",
+          "gradle.properties",
+          "gradlew",
+          "gradlew.bat",
+          "settings.gradle.kts"
+        ],
+        "directories": [
+          "composeApp",
+          ".git",
+          ".idea",
+          ".kotlin",
+          ".gradle",
+          "gradle",
+          ".fleet"
+        ]
+      },
+      "composeApp": {
+        "description": "Main application code shared across Compose Multiplatform targets",
+        "directories": [
+          "commonMain",
+          "desktopMain"
+        ]
+      }
+    },
+    "features": [
+      "Interface de usuário moderna com Compose Multiplatform",
+      "Arquitetura limpa e modular",
+      "Suporte a temas claro/escuro",
+      "Internacionalização (i18n)"
+    ],
+    "setup": {
+      "requirements": ["JDK 17 ou superior"],
+      "buildCommand": "./gradlew build",
+      "runCommand": "./gradlew :composeApp:run"
+    },
+    "lastUpdate": "2024-04-02"
+  }
+} 
