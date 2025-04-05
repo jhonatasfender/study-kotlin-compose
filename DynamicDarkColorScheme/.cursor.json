@@ -1,0 +1,88 @@
+{
+  "projectInfo": {
+    "name": "DynamicDarkColorScheme",
+    "type": "desktop",
+    "framework": "compose-multiplatform",
+    "lastUpdated": "2024-04-05"
+  },
+  "structure": {
+    "root": {
+      "composeApp": {
+        "src": {
+          "desktopMain": {
+            "kotlin": {
+              "org.poc": {
+                "App.kt": {
+                  "components": [
+                    "App",
+                    "ColorBox",
+                    "TreeNode"
+                  ],
+                  "features": [
+                    "Dynamic color scheme visualization",
+                    "Color palette display with variations",
+                    "Tree-like color hierarchy"
+                  ]
+                },
+                "main.kt": {
+                  "components": ["main"]
+                }
+              }
+            }
+          }
+        },
+        "build.gradle.kts": {
+          "dependencies": {
+            "compose": [
+              "runtime",
+              "foundation",
+              "material",
+              "ui",
+              "components.resources",
+              "components.uiToolingPreview"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "features": {
+    "dynamicColorScheme": {
+      "status": "implemented",
+      "platform": "desktop",
+      "components": {
+        "colorDisplay": {
+          "type": "squares",
+          "shows": [
+            "Primary colors with variations",
+            "Secondary colors with variations",
+            "Color relationships"
+          ]
+        },
+        "treeVisualization": {
+          "type": "hierarchical",
+          "shows": [
+            "Primary",
+            "Secondary",
+            "Tertiary"
+          ]
+        }
+      },
+      "implementation": {
+        "baseColor": "selectedColor",
+        "variations": {
+          "primary": {
+            "main": "selectedColor",
+            "dark": "alpha = 0.8f",
+            "light": "alpha = 0.6f"
+          },
+          "secondary": {
+            "main": "red = 0.8f",
+            "dark": "red = 0.6f",
+            "light": "red = 0.4f"
+          }
+        }
+      }
+    }
+  }
+} 
