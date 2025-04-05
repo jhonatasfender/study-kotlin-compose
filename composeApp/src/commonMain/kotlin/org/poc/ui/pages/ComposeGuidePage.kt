@@ -1,12 +1,17 @@
 package org.poc.ui.pages
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
+/**
+ * @link https://developer.android.com/develop/ui/compose/mental-model?hl=pt-br
+ */
 @Composable
 fun ComposeGuidePage() {
     Column(
@@ -41,6 +46,17 @@ fun ComposeGuidePage() {
                 modifier = Modifier.padding(16.dp)
             ) {
                 Text("I've been clicked $clicks times")
+            }
+        }
+
+        Column {
+            Text("Header", style = MaterialTheme.typography.bodyLarge)
+            HorizontalDivider()
+
+            LazyColumn {
+                items(List(3) { it }) { index ->
+                    Text("Item #$index")
+                }
             }
         }
     }

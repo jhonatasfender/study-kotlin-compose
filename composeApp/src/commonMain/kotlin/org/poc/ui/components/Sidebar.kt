@@ -11,6 +11,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Code
+import androidx.compose.material.icons.filled.ViewModule
+import androidx.compose.material.icons.filled.Science
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.background
 import androidx.compose.ui.graphics.Color
@@ -61,6 +63,20 @@ fun Sidebar(
                 onClick = { onNavigate(Screen.ComposeGuide.route) },
                 icon = Icons.Default.Code,
                 label = "Como trabalhar com o Compose"
+            )
+
+            NavigationItem(
+                selected = currentRoute == Screen.LayoutResponsive.route,
+                onClick = { onNavigate(Screen.LayoutResponsive.route) },
+                icon = Icons.Default.ViewModule,
+                label = "Layout Responsivo"
+            )
+
+            NavigationItem(
+                selected = currentRoute == Screen.SideEffects.route,
+                onClick = { onNavigate(Screen.SideEffects.route) },
+                icon = Icons.Default.Science,
+                label = "Side Effects"
             )
         }
     }

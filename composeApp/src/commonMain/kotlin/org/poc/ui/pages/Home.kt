@@ -27,6 +27,8 @@ fun Home() {
                     Screen.Home.route -> Text("Home Page")
                     Screen.Example.route -> ExamplePage()
                     Screen.ComposeGuide.route -> ComposeGuidePage()
+                    Screen.LayoutResponsive.route -> LayoutResponsivePage()
+                    Screen.SideEffects.route -> SideEffectsPage()
                 }
             }
         }
